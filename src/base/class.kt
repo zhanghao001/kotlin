@@ -4,7 +4,7 @@ import java.io.File
 import java.util.*
 
 /**
- * @author zhanghao2
+ * @author hao_zhang3
  * @date 2018-12-15
  */
 private interface Clickable {
@@ -63,7 +63,7 @@ fun getFacebookName(id: Int) = id.toString()
 class UserB private constructor(val nickName: String) {
     companion object {
         fun newSubscribingUser(email: String) =
-            UserB(email.substringBefore("@"))
+                UserB(email.substringBefore("@"))
 
         fun newFacebookUser(accountId: Int) = UserB(getFacebookName(accountId))
     }
