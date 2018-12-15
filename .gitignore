@@ -1,3 +1,6 @@
-.idea/*.xml
-out/
+# IntelliJ project files
+.gradle/
+.idea/
 *.iml
+out/
+build/
