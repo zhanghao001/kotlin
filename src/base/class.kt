@@ -73,15 +73,15 @@ interface JSONFactory<T> {
     fun formJSON(jsonText: String): T
 }
 
-class Person(val name: String) {
-    companion object : JSONFactory<Person> {
-        override fun formJSON(jsonText: String): Person = Person("testJSON")
+class PersonA(val name: String) {
+    companion object : JSONFactory<PersonA> {
+        override fun formJSON(jsonText: String): PersonA = PersonA("testJSON")
     }
 }
 
 fun <T> loadFromJSON(factory: JSONFactory<T>): T = factory.formJSON("")
 
-fun Person.Companion.formJSON2(): Person = Person("testJSON2")
+fun PersonA.Companion.formJSON2(): PersonA = PersonA("testJSON2")
 
 fun countClicks(buttons: Buttons) {
     var clickCount = "1"
@@ -124,8 +124,8 @@ fun main(args: Array<String>) {
     println(subscribingUser.nickName)
     println(facebookUser.nickName)
 
-    println(loadFromJSON(Person).name)
-    println(Person.formJSON2().name)
+    println(loadFromJSON(PersonA).name)
+    println(PersonA.formJSON2().name)
 
     //对象表达式, 匿名内部类
     val buttons = Buttons("s", 1)
