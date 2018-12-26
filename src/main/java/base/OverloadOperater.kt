@@ -87,4 +87,10 @@ fun main(args: Array<String>) {
     val p = MutablePoint(2, 4)
     p[1] = 5
     println(p)
+
+    //调用了component1,最多5个
+    println(p.component1())
+    val (x, y) = p
+    println(x)
+    println(y)
 }
